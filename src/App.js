@@ -3,6 +3,7 @@ import './App.css';
 import Cosmetics from './components/Cosmetics/Cosmetics';
 import Shoes from './components/Shoes/Shoes';
 import Watch from './components/Watch/Watch';
+import Profiles from './components/Profiles/Profiles';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Cosmetics></Cosmetics>
       <Shoes></Shoes>
       <Watch></Watch>
+      <Profiles></Profiles>
     </div>
   );
 }
