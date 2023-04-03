@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Profile from '../Profile/Profile';
+import Profile, { getTotal } from '../Profile/Profile';
 
 const Profiles = () => {
     // Creating Data
@@ -59,11 +59,14 @@ const Profiles = () => {
      fetch('data.json')
      .then(res => res.json())
      .then(data => setProfiles(data))
-   },[])
+   },[]);
+
+   const total = getTotal(profiles)
 
     return (
         <div>
             <h1>Users/Profiles List</h1>
+            <p style={{color:"red", fontSize:"20px"}}>Total age : {total}</p>
             {
                 profiles.map(profile => <Profile
                     key = {profile.id}

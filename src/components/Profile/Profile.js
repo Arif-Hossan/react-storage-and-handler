@@ -26,3 +26,21 @@ const Profile = (props) => {
 };
 
 export default Profile;
+
+// const items = [
+//     {id : 1 , name : "Alta" , price : 100},
+//     {id : 2 , name : "Alta" , price : 100},
+//     {id : 3 , name : "Alta" , price : 100},
+//     {id : 4 , name : "Alta" , price : 100},
+//     {id : 5 , name : "Alta" , price : 100},
+// ];
+
+// const itemsReducer = (previous, current ) => previous + current.price;
+// const itemTotal = items.reduce(itemsReducer,0);
+
+const getTotalAge = profiles =>{
+    const reducer = (previous,current) => previous + current.age;
+    const total = profiles.reduce(reducer,0);
+    return total;
+}
+export {getTotalAge as getTotal};
